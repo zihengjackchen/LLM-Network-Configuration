@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 67 with 'interface GigabitEthernet2/@0' has an invalid interface name, the reason is that '@' is not a valid character for an interface identifier.",
+        "2. Line 108 with 'aggregate-address 2.128.0.0 255.255.0.0 summary-only' has an invalid network mask, the reason is that the mask should be in the format of 255.255.128.0 for a /9 prefix.",
+        "3. Line 122 with 'ip community-list expanded as1_community permit _1:' has an invalid community list syntax, the reason is that the underscore '_' is not a valid character to start a community number.",
+        "4. Line 123 with 'ip community-list expanded as2_community permit _2:' has an invalid community list syntax, the reason is that the underscore '_' is not a valid character to start a community number.",
+        "5. Line 124 with 'ip community-list expanded as3_community permit _3:' has an invalid community list syntax, the reason is that the underscore '_' is not a valid character to start a community number."
+    ]
+}
+```

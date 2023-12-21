@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 61 with 'ip address 2.12.21.1 255.255.255.259' has an invalid subnet mask, the reason is that the last octet of the subnet mask is 259, which exceeds the maximum value of 255 for an octet.",
+        "2. Line 83 with 'neighbor 2.1.-88.2 activate' contains an invalid IP address, the reason is that the third octet is negative, which is not valid in an IP address.",
+        "3. Line 97 with 'permit ip 2.0.0.313 0.255.255.255 3.0.0.0 0.255.255.255' contains an invalid IP address, the reason is that the third octet is 313, which exceeds the maximum value of 255 for an octet.",
+        "4. Line 107 with 'access-list 101 permit ip host 1.0.1.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 1.0.1.0' as 'host' keyword is used to specify a single host IP.",
+        "5. Line 108 with 'access-list 103 permit ip host 3.0.1.0 host 284.255.255.0' contains an invalid IP address and wildcard mask, the reason is that the first octet of the wildcard mask is 284, which exceeds the maximum value of 255 for an octet, and 'host' keyword should be followed by a single host IP."
+    ]
+}
+```

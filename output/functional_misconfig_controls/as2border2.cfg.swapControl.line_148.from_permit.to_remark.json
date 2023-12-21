@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 97 with 'aggregate-address 2.128.0.0 255.255.0.0 summary-only' has an invalid subnet mask, the reason is that the subnet mask is missing a segment and should be in the form of four octets like 255.255.0.0.",
+        "2. Line 117 with 'access-list 101 permit ip host 1.0.1.0 host 255.255.255.0' has an invalid host IP address, the reason is that the source IP should not end with .0 if it is denoted as a host address.",
+        "3. Line 118 with 'access-list 101 permit ip host 1.0.2.0 host 255.255.255.0' has an invalid host IP address, the reason is that the source IP should not end with .0 if it is denoted as a host address.",
+        "4. Line 119 with 'access-list 103 permit ip host 3.0.1.0 host 255.255.255.0' has an invalid host IP address, the reason is that the source IP should not end with .0 if it is denoted as a host address.",
+        "5. Line 120 with 'access-list 103 permit ip host 3.0.2.0 host 255.255.255.0' has an invalid host IP address, the reason is that the source IP should not end with .0 if it is denoted as a host address."
+    ]
+}
+```

@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 61 with 'ip address 2.12.22.1 255.-59.255.0' has an invalid subnet mask, the reason is that subnet masks cannot have negative numbers.",
+        "2. Line 97 with 'aggregate-address 2.128.0.0 255.255.0.0 summary-only' has an invalid subnet mask, the reason is that the subnet mask should be in the form of four octets separated by periods, and each octet should be a value between 0 and 255.",
+        "3. Line 117 with 'access-list 101 permit ip host 1.0.1.0 host 255.255.255.0' has an invalid access list statement, the reason is that the 'host' keyword should be followed by a single IP address, not a network address.",
+        "4. Line 118 with 'access-list 101 permit ip host 1.0.2.0 host 255.255.255.0' has the same error as the previous one.",
+        "5. Line 119 with 'access-list 103 permit ip host 3.0.2.0 host 255.255.255.-49' has an invalid subnet mask, the reason is that subnet masks cannot have negative numbers and must be between 0 and 255."
+    ]
+}
+```

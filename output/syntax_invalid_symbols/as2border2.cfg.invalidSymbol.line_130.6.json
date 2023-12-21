@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 97 with 'deny   ip 2.0.0.0 0.255.255.255 any(' has an invalid syntax, the reason is that there is an open parenthesis without a closing parenthesis at the end of the line.",
+        "2. Line 108 with 'access-list 101 permit ip host 1.0.1.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 1.0.1.0' to match a single host.",
+        "3. Line 109 with 'access-list 101 permit ip host 1.0.2.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 1.0.2.0' to match a single host.",
+        "4. Line 110 with 'access-list 103 permit ip host 3.0.1.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 3.0.1.0' to match a single host.",
+        "5. Line 111 with 'access-list 103 permit ip host 3.0.2.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 3.0.2.0' to match a single host."
+    ]
+}
+```

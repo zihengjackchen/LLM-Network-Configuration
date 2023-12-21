@@ -1,0 +1,12 @@
+```json
+{
+    "Correctness": "Yes",
+    "RootCause": [
+        "1. Line 97 with 'neighbor 2.1.2.322 activate' has an invalid IP address, the reason is that the fourth octet of the IP address is 322, which exceeds the maximum value of 255 for an octet.",
+        "2. Line 123 with 'access-list 101 permit ip host 1.0.1.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 1.0.1.0' to match a single host IP address.",
+        "3. Line 124 with 'access-list 101 permit ip host 1.0.2.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 1.0.2.0' to match a single host IP address.",
+        "4. Line 125 with 'access-list 103 permit ip host 3.0.1.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 3.0.1.0' to match a single host IP address.",
+        "5. Line 126 with 'access-list 103 permit ip host 3.0.2.0 host 255.255.255.0' has an incorrect wildcard mask, the reason is that 'host 255.255.255.0' should be 'host 3.0.2.0' to match a single host IP address."
+    ]
+}
+```
